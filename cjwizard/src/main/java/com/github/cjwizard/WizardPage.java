@@ -81,7 +81,8 @@ public abstract class WizardPage extends JPanel {
     * wizard page with set names.
     */
    protected Set<Component> _namedComponents = new HashSet<Component>();
-   
+   private boolean scrollable = false;
+
    /**
     * Constructor.  Sets the title and description for
     * this wizard panel.
@@ -299,6 +300,14 @@ public abstract class WizardPage extends JPanel {
     */
    protected Set<Component> getNamedComponents() {
       return _namedComponents;
+   }
+
+   public boolean isScrollable() {
+      return scrollable;
+   }
+
+   public void setScrollable(boolean scrollable) {
+      this.scrollable = scrollable;
    }
 
    /**
